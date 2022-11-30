@@ -1,0 +1,368 @@
+@import url('https://fonts.cdnfonts.com/css/sportesia');
+
+:root {
+    --light: #fff;
+    --darkest: black;
+    --dark: #808080;
+    --primary: rgb(18, 231, 18);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Sportesia', sans-serif;
+    background: #808080;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    border-bottom: 2px solid var(--primary);
+}
+
+label.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    padding: 0 100px;
+    line-height: 80px;
+    z-index: 1;
+}
+
+.mainlogo {
+    display: none;
+}
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+
+a.active,
+a:hover {
+  border: 1px solid var(--primary); 
+  transition: .5s; 
+}
+
+nav #icon {
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+    label.logo {
+        display: none;
+    }
+
+    .mainlogo {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin-top: -20px;
+        width: 160px;
+        height: 120px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    label.logo {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 1048px) {
+    label.logo {
+        font-size: 32px;
+        padding-left: 60px;
+    }
+
+    nav ul {
+        margin-right: 20px;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 909px) {
+    nav #icon {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(63, 63, 63);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav li {
+       display: block; 
+       margin: 50px 0;
+       line-height: 30px;
+
+    }
+
+    nav a {
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    a.active,a:hover {
+        border: none;
+        color: rgb(19, 233, 19);
+
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+} 
+
+.eplogo {
+    top: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    padding: 40px 0;
+}
+
+figure {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border: 2px solid var(--primary);
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+}
+
+.thumb_img_list{
+    text-align: center;
+}
+.thumb_img_list .ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumb_img_list .ul .gallery {
+    display: inline-block;
+    border: 1px solid var(--primary);
+    width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.thumb_img_list .ul .gallery img {
+    display: block;
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        padding: 0 40px;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        padding: 0 40px;
+        margin-top: 40px;
+    }
+}
+
+/*footer*/
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    height: 100px;
+    width: 100vw;
+    font-family: 'Sportesia', sans-serif;
+    padding-top: 30px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .2s ease;
+}
+
+.socials a:hover {
+    color: black;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    font-family: 'Trebuchet MS';
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    font-weight: 200;
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 750px) {
+    footer {
+        position: absolute;
+    }
+}
+
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.productpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 40px;
+    padding: 40px;
+    margin: 30px;
+    background: rgb(109, 109, 109);
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+}
+
+.products {
+    display: flex;
+    width: 90%;
+    margin: 0.5%;
+    margin-left: 5%;
+}
+
+.epprod {
+    width: 20%;
+}
+
+.pimage {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.ptitles {
+    display: flex;
+    text-align: center;
+    color: white;
+    margin-right: 15px;
+    font-size: 18px;
+    padding-top: 10px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
